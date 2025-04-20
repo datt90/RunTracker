@@ -7,9 +7,9 @@ Welcome to Swift Template, an useful project structure for creating effectively 
 ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
 
 - Requirements:
-  - macOS: 14.1 (or higher)
-  - Xcode: 15.0.1 +
-  - Xcodegen: 2.38.0
+  - macOS: 15.3.2 (or higher)
+  - Xcode: 16.2 +
+  - Xcodegen: 2.42.0
   - Carthage: 0.39.1
 
 # Features
@@ -19,9 +19,9 @@ Welcome to Swift Template, an useful project structure for creating effectively 
   
 
 # Installation
-- Clone  repository: `$ git clone https://github.com/htq287/objectivec-template.git`
+- Clone  repository: `$ git clone https://github.com/hgq287/DTSwift`
 - Install your project:
-  - Point to template folder: `$ cd objectivec-template`
+  - Point to template folder: `$ cd DTSwift`
   - Before installing the project, make sure [XCodegen](https://github.com/yonaskolb/XcodeGen), [Carthage](https://github.com/Carthage/Carthage#installing-carthage) and [Cocoapods](https://guides.cocoapods.org/using/getting-started.html) installed. If not yet installed, just run `$ make init-env`
   - To create your project, just run: 
     - Advanced template
@@ -54,7 +54,7 @@ Welcome to Swift Template, an useful project structure for creating effectively 
 # License
 The MIT License (MIT)
 
-Copyright (C) 2024, Hung Q. https://htq287.com. All rights reserved.
+Copyright (C) 2025, Hung Q. https://hgq287.com. All rights reserved.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
