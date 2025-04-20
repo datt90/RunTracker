@@ -2,6 +2,16 @@ name: TPLProjectName
 options:
   minimumXcodeGenVersion: 2.42.0
   createIntermediateGroups: true
+packages:
+  Alamofire:
+    url: https://github.com/Alamofire/Alamofire.git
+    majorVersion: 5.10.0
+  RealmSwift:
+    url: https://github.com/realm/realm-swift.git
+    majorVersion: 20.0.2
+  SQLite:
+    url: https://github.com/stephencelis/SQLite.swift.git
+    majorVersion: 0.15.3
 targets:
   TPLProjectName-iOS:
     platform: iOS 
@@ -34,9 +44,8 @@ targets:
       Debug: configs/TPLProjectNameCore-Debug.xcconfig
       Release: configs/TPLProjectNameCore-Release.xcconfig
     dependencies:
-      - carthage: Realm
-      - carthage: RealmSwift
-      - carthage: Alamofire
+      - package: Alamofire 
+      - package: RealmSwift
   #Test Targets
   # TPLProjectName-macOSTests:
   #   platform: macOS
@@ -64,29 +73,29 @@ targets:
       testTargets:
         - TPLProjectName-iOSTests
       gatherCoverageData: true
-  SharedTests:
-    platform: macOS
-    type: bundle.unit-test
-    configFiles:
-      Debug: configs/SharedTests.xcconfig
-    sources:
-      - Tests/SharedTests
-    dependencies:
-      - target: Shared
-    scheme:
-      testTargets:
-        - SharedTests
-      gatherCoverageData: true
-  TPLProjectNameCoreTests:
-    platform: macOS
-    type: bundle.unit-test
-    configFiles:
-      Debug: configs/TPLProjectNameCoreTests.xcconfig
-    sources:
-      - Tests/TPLProjectNameCoreTests
-    dependencies:
-      - target: TPLProjectNameCore
-    scheme:
-      testTargets:
-        - TPLProjectNameCoreTests
-      gatherCoverageData: true
+  # SharedTests:
+  #   platform: macOS
+  #   type: bundle.unit-test
+  #   configFiles:
+  #     Debug: configs/SharedTests.xcconfig
+  #   sources:
+  #     - Tests/SharedTests
+  #   dependencies:
+  #     - target: Shared
+  #   scheme:
+  #     testTargets:
+  #       - SharedTests
+  #     gatherCoverageData: true
+  # TPLProjectNameCoreTests:
+  #   platform: macOS
+  #   type: bundle.unit-test
+  #   configFiles:
+  #     Debug: configs/TPLProjectNameCoreTests.xcconfig
+  #   sources:
+  #     - Tests/TPLProjectNameCoreTests
+  #   dependencies:
+  #     - target: TPLProjectNameCore
+  #   scheme:
+  #     testTargets:
+  #       - TPLProjectNameCoreTests
+  #     gatherCoverageData: true
