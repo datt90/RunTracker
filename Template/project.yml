@@ -1,9 +1,8 @@
 name: TPLProjectName
 options:
-  minimumXcodeGenVersion: 2.2.0
+  minimumXcodeGenVersion: 2.42.0
   createIntermediateGroups: true
 targets:
-  #iOS application
   TPLProjectName-iOS:
     platform: iOS 
     type: application
@@ -12,20 +11,6 @@ targets:
     configFiles:
       Debug: configs/TPLProjectName-iOS-Debug.xcconfig
       Release: configs/TPLProjectName-iOS-Release.xcconfig
-    scheme:
-      environmentVariables:
-        ENABLE_SIGNPOST: YES
-  #macOS application
-  TPLProjectName-macOS:
-    platform: macOS
-    type: application
-    sources:
-      - TPLProjectName/macOS
-    configFiles:
-      Debug: configs/TPLProjectName-macOS-Debug.xcconfig
-      Release: configs/TPLProjectName-macOS-Release.xcconfig
-    dependencies:
-      - target: Shared
     scheme:
       environmentVariables:
         ENABLE_SIGNPOST: YES
@@ -53,19 +38,19 @@ targets:
       - carthage: RealmSwift
       - carthage: Alamofire
   #Test Targets
-  TPLProjectName-macOSTests:
-    platform: macOS
-    type: bundle.unit-test
-    configFiles:
-      Debug: configs/TPLProjectName-macOSTests.xcconfig
-    sources:
-      - Tests/TPLProjectName-macOSTests
-    dependencies:
-      - target: TPLProjectName-macOS
-    scheme:
-      testTargets:
-        - TPLProjectName-macOSTests
-      gatherCoverageData: true
+  # TPLProjectName-macOSTests:
+  #   platform: macOS
+  #   type: bundle.unit-test
+  #   configFiles:
+  #     Debug: configs/TPLProjectName-macOSTests.xcconfig
+  #   sources:
+  #     - Tests/TPLProjectName-macOSTests
+  #   dependencies:
+  #     - target: TPLProjectName-macOS
+  #   scheme:
+  #     testTargets:
+  #       - TPLProjectName-macOSTests
+  #     gatherCoverageData: true
   TPLProjectName-iOSTests:
     platform: macOS
     type: bundle.unit-test

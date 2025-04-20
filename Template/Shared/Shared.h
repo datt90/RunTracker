@@ -2,11 +2,10 @@
 //  Shared.h
 //  Shared
 //
-//  Created by TPLAuthor on 5/12/19.
-//  Copyright © 2020 TPLOrganizationName. All rights reserved.
+//  Created by Hung Q. on 20/4/25.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for Shared.
 FOUNDATION_EXPORT double SharedVersionNumber;

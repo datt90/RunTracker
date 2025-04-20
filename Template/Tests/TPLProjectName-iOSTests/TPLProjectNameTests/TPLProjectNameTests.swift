@@ -1,15 +1,13 @@
 //
-//  SharedTests.swift
-//  SharedTests
+//  TPLProjectNameTests.swift
+//  TPLProjectNameTests
 //
-//  Created by TPLAuthor on 6/17/19.
-//  Copyright © 2020 TPLOrganizationName. All rights reserved.
+//  Created by Hung Q. on 20/4/25.
 //
 
 import XCTest
-@testable import Shared
 
-class SharedTests: XCTestCase {
+final class TPLProjectNameTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,11 +20,14 @@ class SharedTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        // Any test you write for XCTest can be annotated as throws and async.
+        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
+        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

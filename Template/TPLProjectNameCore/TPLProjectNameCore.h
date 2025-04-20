@@ -2,11 +2,10 @@
 //  TPLProjectNameCore.h
 //  TPLProjectNameCore
 //
-//  Created by TPLAuthor on 11/19/20.
-//  Copyright © 2020 TPLOrganizationName. All rights reserved.
+//  Created by TPLAuthor on 20/4/25.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for TPLProjectNameCore.
 FOUNDATION_EXPORT double TPLProjectNameCoreVersionNumber;
