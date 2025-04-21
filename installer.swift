@@ -23,18 +23,18 @@ default:
 }
 
 let TPLAuthor = "TPLAuthor"
-var TPLBundleIdentifier = "TPLBundleIdentifier"
+var TPLBundleIdentifier = "com.dtswift.\(TPLProjectName)"
 let TPLAuthorWebsite = "TPLAuthorWebsite"
 let TPLUserName = "TPLUserName"
 let TPLOrganizationName = "TPLOrganizationName"
 let TPLCopyright = "Copyright © 2025"
 
-var projectName = "SampleProject"
-var bundleIdentifier = "com.Datt.SampleProject"
-var author = "Hg Q."
+var projectName = "DTSwift"
+var bundleIdentifier = "com.dtswift.DTSwift"
+var author = "DTSwift"
 var authorWebsite = "https://hgq287.com"
-var userName = "datt"
-var organizationName = "Hg Q."
+var userName = "dtswift"
+var organizationName = "DTSwift"
 var copyright = "Copyright © 2025"
 
 var out = "Out"
