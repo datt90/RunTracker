@@ -11,12 +11,6 @@ switch templateName {
 case "Template":
     TPLProjectName = "TPLProjectName"
     break
-case "CLT_GenericTemplate":
-    TPLProjectName = "CLTProjectName"
-    break
-case "macOS_GenericTemplate":
-    TPLProjectName = "GRTPLProjectName"
-    break
 default:
     break
     
