@@ -21,6 +21,8 @@ targets:
     configFiles:
       Debug: configs/TPLProjectName-iOS-Debug.xcconfig
       Release: configs/TPLProjectName-iOS-Release.xcconfig
+    entitlements:
+      path: TPLProjectName/iOS/TPLProjectName.entitlements
     scheme:
       environmentVariables:
         ENABLE_SIGNPOST: YES
@@ -33,6 +35,8 @@ targets:
     configFiles:
       Debug: configs/TPLProjectName-macOS-Debug.xcconfig
       Release: configs/TPLProjectName-macOS-Release.xcconfig
+    entitlements:
+      path: TPLProjectName/macOS/TPLProjectName.entitlements
     dependencies:
       - target: Shared
     scheme:
