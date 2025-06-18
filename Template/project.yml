@@ -6,12 +6,6 @@ packages:
   Alamofire:
     url: https://github.com/Alamofire/Alamofire.git
     majorVersion: 5.10.0
-  RealmSwift:
-    url: https://github.com/realm/realm-swift.git
-    majorVersion: 20.0.2
-  SQLite:
-    url: https://github.com/stephencelis/SQLite.swift.git
-    majorVersion: 0.15.3
 targets:
   TPLProjectName-iOS:
     platform: iOS 
@@ -64,7 +58,6 @@ targets:
       Release: configs/TPLProjectNameCore-Release.xcconfig
     dependencies:
       - package: Alamofire 
-      - package: RealmSwift
   #Test Targets
   TPLProjectName-macOSTests:
     platform: macOS
