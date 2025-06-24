@@ -6,17 +6,25 @@
 //
 
 import SwiftUI
+import TPLProjectNameCore
 
 struct ContentView: View {
+    @EnvironmentObject var appState: AppState
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        LoginView()
+            .environmentObject(appState.authInteractor)
+        
+        .onAppear {
+            // Perform any setup required when the view appears
+            appState.startup()
         }
-        .padding()
+        .onDisappear {
+            // Perform any cleanup if necessary
+            appState.shutdown()
+        }
     }
+      
 }
 
 #Preview {
