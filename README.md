@@ -1,10 +1,10 @@
-# DTSwift
+# HGSwift
 
-Welcome to **DTSwift**, a Swift project template built with care to help you kickstart iOS and macOS apps using **Clean Architecture**. It's designed to give you a clean foundation with shared logic, modular structure, and easy setup using **XcodeGen**.
+Welcome to **HGSwift**, a Swift project template built with care to help you kickstart iOS and macOS apps using **Clean Architecture**. It's designed to give you a clean foundation with shared logic, modular structure, and easy setup using **XcodeGen**.
 
-## Why DTSwift?
+## Why HGSwift?
 
-I created DTSwift to:
+I created HGSwift to:
 
 - Set up a solid, scalable Swift project structure in 30 minutes.
 - Support both **iOS** and **macOS** with shared and platform-specific targets.
@@ -17,7 +17,7 @@ I created DTSwift to:
 Here's a high-level look at the template structure:
 
 ```
-DTSwift/
+HGSwift/
 ├── installer.swift 
 ├── Makefile                  
 ├── LICENSE
@@ -46,8 +46,8 @@ DTSwift/
 1. **Clone this repo:**
 
   ```bash
-  git clone https://github.com/hgq287/DTSwift.git
-  cd DTSwift
+  git clone https://github.com/hgq287/HGSwift.git
+  cd HGSwift
   ```
 
 2. **Run the installer script:**
