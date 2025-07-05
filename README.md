@@ -67,7 +67,7 @@ It will then copy everything into a new folder and apply your custom names.
 3. **Generate the Xcode project:**
 
 ```bash
-cd YourNewProject
+cd `YOUR PROJECT`
 xcodegen
 ```
 
