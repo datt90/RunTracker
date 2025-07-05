@@ -5,9 +5,10 @@ options:
 packages:
   Alamofire:
     url: https://github.com/Alamofire/Alamofire.git
-    majorVersion: 5.10.0
+    majorVersion: 5.10.2
   GRDB:
     url: https://github.com/groue/GRDB.swift.git
+    branch: master
 targets:
   TPLProjectName-iOS:
     platform: iOS 
@@ -59,7 +60,8 @@ targets:
       Debug: configs/TPLProjectNameCore-Debug.xcconfig
       Release: configs/TPLProjectNameCore-Release.xcconfig
     dependencies:
-      - package: Alamofire 
+      - package: Alamofire
+      - package: GRDB 
       
   #Test Targets
   TPLProjectName-macOSTests:
