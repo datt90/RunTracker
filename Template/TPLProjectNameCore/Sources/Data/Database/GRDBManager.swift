@@ -13,20 +13,26 @@ public class GRDBManager {
     public static let shared = GRDBManager()
 
     private var dbPool: DatabasePool!
-    public var dbQueue: DatabaseQueue!
+
+    public init() {
+        print("GRDBManager: Initialized")
+    }
     
-    private init() {
+    public func openDatabase(databaseURL: URL) {
         do {
-            let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-            let dbURL = URL(fileURLWithPath: path).appendingPathComponent("dtswift.sqlite3")
-            
-            dbPool = try DatabasePool(path: dbURL.path)
-            self.dbQueue = try DatabaseQueue(path: dbURL.path)
-            
-            try migrator.migrate(dbPool)
-            print("GRDBManager: Database opened and migrated at \(dbURL.path)")
+            dbPool = try DatabasePool(path: databaseURL.path)
+            print("GRDBManager: Database opened and migrated at \(databaseURL.path)")
         } catch {
             print("GRDBManager: Error opening or migrating database: \(error)")
+        }
+    }
+    
+    public func migrateDatabase() {
+        do {
+            try migrator.migrate(dbPool)
+            print("GRDBManager: Database migrated successfully.")
+        } catch {
+            print("GRDBManager: Error migrating database: \(error)")
         }
     }
     
@@ -47,5 +53,39 @@ public class GRDBManager {
         }
         
         return migrator
+    }
+    
+    
+    // MARK: - Database Operations
+    
+    public func insertUser(user: User?) -> User? {
+        guard let user = user else {
+            print("Error: User is nil")
+            return nil
+        }
+        
+        var savedUser = user
+        do {
+            try dbPool.write { db in
+                try savedUser.save(db)
+            }
+            
+            return savedUser
+            
+        } catch {
+            print("Error saving user: \(error)")
+            return nil
+        }
+    }
+    
+    public func fetchUsers() -> [User] {
+        do {
+            return try dbPool.read { db in
+                try User.fetchAll(db)
+            }
+        } catch {
+            print("Error fetching users: \(error)")
+            return []
+        }
     }
 }

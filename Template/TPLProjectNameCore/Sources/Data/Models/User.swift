@@ -24,7 +24,7 @@ public struct User: BaseModel {
 
 // MARK: - GRDB Protocols
 
-extension User: FetchableRecord, PersistableRecord {
+extension User: FetchableRecord, MutablePersistableRecord {
 
     public static var databaseTableName: String { "user" }
 
@@ -32,6 +32,11 @@ extension User: FetchableRecord, PersistableRecord {
         static let id = Column("id")
         static let username = Column("username")
         static let email = Column("email")
+    }
+    
+    // Update auto-incremented id upon successful insertion
+    mutating public func didInsert(_ inserted: InsertionSuccess) {
+        id = inserted.rowID
     }
     
     // MARK: - init
@@ -47,4 +52,5 @@ extension User: FetchableRecord, PersistableRecord {
         container[Columns.username] = username
         container[Columns.email] = email
     }
+    
 }
