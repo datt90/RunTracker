@@ -8,6 +8,6 @@
 import Foundation
 import GRDB
 
-protocol BaseModel: Identifiable, Codable {
+protocol BaseModel: Codable, Identifiable, Equatable {
     var id: Int64? { get set }
 }
