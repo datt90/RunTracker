@@ -8,4 +8,13 @@ init_env:
 	brew install carthage
 	brew install xcodegen
 install:
+	@echo "Deleting old project files..."
+	rm -rf $(CWD)/Out/*
+
+	@echo "Current working directory: $(CWD)"
+	@echo "Creating Out directory..."
+	mkdir -p $(CWD)/Out
+
+	@echo "Installing your project..."
 	swift -target arm64-apple-macosx15.0 installer.swift -template Template
+

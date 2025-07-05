@@ -17,18 +17,18 @@ default:
 }
 
 let TPLAuthor = "TPLAuthor"
-var TPLBundleIdentifier = "com.dtswift.\(TPLProjectName)"
+var TPLBundleIdentifier = "com.hgswift.\(TPLProjectName)"
 let TPLAuthorWebsite = "TPLAuthorWebsite"
 let TPLUserName = "TPLUserName"
 let TPLOrganizationName = "TPLOrganizationName"
 let TPLCopyright = "Copyright © 2025"
 
-var projectName = "DTSwift"
-var bundleIdentifier = "com.dtswift.DTSwift"
-var author = "DTSwift"
-var authorWebsite = "https://hgq287.com"
-var userName = "dtswift"
-var organizationName = "DTSwift"
+var projectName = "HGSwift"
+var bundleIdentifier = "com.hgswift.HGSwift"
+var author = "HGSwift"
+var authorWebsite = "https://hgq287.github.io/"
+var userName = "hgswift"
+var organizationName = "HGSwift"
 var copyright = "Copyright © 2025"
 
 var out = "Out"
@@ -148,7 +148,7 @@ do {
 // rename files/Folders and update content
  let enumerator = fileManager.enumerator(at: newProjectFolderURL as URL, includingPropertiesForKeys: [.nameKey, .isDirectoryKey], options: [], errorHandler: nil)!
  var directories = [NSURL]()
- print("\nCreating \(projectName) ...")
+ print("\nCreated \(projectName) ...")
  while let fileURL = enumerator.nextObject() as? NSURL {
      guard !ignoredFiles.contains(fileURL.fileName) else { continue }
      if fileURL.isDirectory {
