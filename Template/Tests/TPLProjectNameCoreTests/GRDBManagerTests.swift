@@ -32,7 +32,7 @@ final class GRDBManagerTests: XCTestCase {
     
     func testDatabaseInitialization() {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let dbURL = URL(fileURLWithPath: path).appendingPathComponent("test_grdb.sqlite3")
+        let dbURL = URL(fileURLWithPath: path).appendingPathComponent("test_grdb.sqlite")
         grdbManager.openDatabase(databaseURL: dbURL)
 
         XCTAssertTrue(FileManager.default.fileExists(atPath: dbURL.path), "Database file should exist")
@@ -40,7 +40,7 @@ final class GRDBManagerTests: XCTestCase {
     
     func testMigrateDatabase_createUserTable() throws {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let dbURL = URL(fileURLWithPath: path).appendingPathComponent("test_grdb.sqlite3")
+        let dbURL = URL(fileURLWithPath: path).appendingPathComponent("test_grdb.sqlite")
         
         if FileManager.default.fileExists(atPath: dbURL.path) {
             // remove existing database file for a clean test
@@ -67,7 +67,7 @@ final class GRDBManagerTests: XCTestCase {
     
     func testInsertUser() throws {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let dbURL = URL(fileURLWithPath: path).appendingPathComponent("test_grdb.sqlite3")
+        let dbURL = URL(fileURLWithPath: path).appendingPathComponent("test_grdb.sqlite")
         
         if FileManager.default.fileExists(atPath: dbURL.path) {
             // remove existing database file for a clean test
@@ -84,7 +84,7 @@ final class GRDBManagerTests: XCTestCase {
     
     func testFetchUsers() throws {
         let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let dbURL = URL(fileURLWithPath: path).appendingPathComponent("test_grdb.sqlite3")
+        let dbURL = URL(fileURLWithPath: path).appendingPathComponent("test_grdb.sqlite")
         
         if FileManager.default.fileExists(atPath: dbURL.path) {
             // remove existing database file for a clean test

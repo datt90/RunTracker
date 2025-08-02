@@ -1,3 +1,5 @@
 #include "Base-macOS.xcconfig"
 
-PRODUCT_BUNDLE_IDENTIFIER = com.dtswift.TPLProjectName
+PRODUCT_BUNDLE_IDENTIFIER = com.hgswift.TPLProjectName
+DATABASE_NAME = TPLProjectName.sqlite
+DATABASE_KEY = test@123

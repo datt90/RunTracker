@@ -25,7 +25,9 @@ public final class AppState: ObservableObject {
     
     // MARK: - Initializer
     public init() {
+        let databaseURL = AppConfig.databaseURL!
         let _sharedDBManager = GRDBManager.shared
+        _sharedDBManager.openDatabase(databaseURL: databaseURL)
         self.dbManager = _sharedDBManager
         
         let _authService = AuthService()
