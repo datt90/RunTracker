@@ -10,8 +10,8 @@ import Foundation
 class AppConfig {
 
     private enum ConfigKeys {
-        static let databaseName = "DATABASE_NAME"
-        static let databaseKey = "DATABASE_KEY"
+        static let databaseName = "databaseName"
+        static let databaseKey = "databaseKey"
         
         
     }

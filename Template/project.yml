@@ -34,6 +34,9 @@ targets:
       Release: configs/TPLProjectName-macOS-Release.xcconfig
     entitlements:
       path: TPLProjectName/macOS/TPLProjectName.entitlements
+    settings:
+      base:
+        INFOPLIST_FILE: TPLProjectName/macOS/Info.plist
     dependencies:
       - target: Shared
     scheme:

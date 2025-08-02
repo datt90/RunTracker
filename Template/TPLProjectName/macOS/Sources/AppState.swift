@@ -28,6 +28,8 @@ public final class AppState: ObservableObject {
         let databaseURL = AppConfig.databaseURL!
         let _sharedDBManager = GRDBManager.shared
         _sharedDBManager.openDatabase(databaseURL: databaseURL)
+        _sharedDBManager.migrateDatabase()
+        
         self.dbManager = _sharedDBManager
         
         let _authService = AuthService()

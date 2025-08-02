@@ -18,10 +18,14 @@ public class GRDBManager {
         print("GRDBManager: Initialized")
     }
     
-    public func openDatabase(databaseURL: URL) {
+    public func openDatabase(databaseURL: URL, encryptionKey: String? = nil) {
         do {
-            dbPool = try DatabasePool(path: databaseURL.path)
-            print("GRDBManager: Database opened and migrated at \(databaseURL.path)")
+            if encryptionKey != nil {
+                // Currently, GRDB does not support encryption directly.
+            } else {
+                // Setup without encryption
+                dbPool = try DatabasePool(path: databaseURL.path)
+            }
         } catch {
             print("GRDBManager: Error opening or migrating database: \(error)")
         }

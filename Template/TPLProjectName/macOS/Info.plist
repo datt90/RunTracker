@@ -2,9 +2,9 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>DATABASE_NAME</key>
+	<key>databaseName</key>
 	<string>$(DATABASE_NAME)</string>
-	<key>DATABASE_KEY</key>
+	<key>databaseKey</key>
 	<string>$(DATABASE_KEY)</string>
 </dict>
 </plist>
